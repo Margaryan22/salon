@@ -40,14 +40,6 @@ public class AdminServiceImpl implements AdminService {
         }
 
         AdminProfile adminProfile = new AdminProfile(user, permissionsLevel);
-        // !!! Важно: Если SystemUser.adminProfile - управляемое поле,
-        // то присвоение user.setAdminProfile(adminProfile) может быть необходимо.
-        // Но если cascade = ALL, то сохранение adminProfile может сохранить и user.
-        // Для этого сценария, где user_id - PK в AdminProfile, часто лучше сохранять AdminProfile.
-        // Если AdminProfile.systemUser - это поле, которое управляет связью, то:
-        // user.setAdminProfile(adminProfile); // Если SystemUser.adminProfile - управляемое
-        // userRepository.save(user); // Сохранение пользователя, если его поле изменилось
-
         return Optional.of(adminProfileRepository.save(adminProfile));
     }
 

@@ -1,3 +1,7 @@
+// TODO 04.10.2025: проработать полную цепочку регистрации пользователя (как админа) и вернуть объект зарегистрированного пользователя (JSON)
+
+
+
 package Frolov_back.NAILS_WEB_APP.controller;
 
 import Frolov_back.NAILS_WEB_APP.service.UserService;
@@ -17,7 +21,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/register")
+    @PostMapping("/register/user")
     public ResponseEntity<UserResponseDto> registerUser(@RequestBody UserRegistrationRequestDto requestDto) {
         // Тут должна быть валидация requestDto
         //userService.registerNewUser() должен возвращать Optional<UserResponseDto>
