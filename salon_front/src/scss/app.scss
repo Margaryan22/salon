@@ -1,0 +1,29 @@
+// app.scss
+
+@import 'variables'; // Import the variables file (assuming it's in the same directory, without the underscore)
+@import './libs/normilize';
+
+.wrapper {
+  width: calc(100vw - 100px);
+  height: 100%;
+  background-color: #fff;
+  max-width: 1400px;
+}
+
+// Global container styles
+.container {
+  width: $container-width;
+  margin: 0 auto;
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 15px;
+}
+
+.content {
+  padding: 40px 0;
+}
+// Apply similar styles to any other container-like elements if needed
+.section,
+.card,
+.wrapper {
+  @extend .container; // Inherit from .container
+}

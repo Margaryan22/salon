@@ -1,0 +1,11 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &_div {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
