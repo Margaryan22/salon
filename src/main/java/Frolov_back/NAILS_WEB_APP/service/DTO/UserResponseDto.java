@@ -11,6 +11,7 @@ public class UserResponseDto {
     private String phone;
     private LocalDateTime createdAt;
     // Не включаем пароль или хеш пароля!
+    private String userType; // "ADMIN", "MASTER", "CLIENT", "UNKNOWN"
 
     // Геттеры и сеттеры
     public Long getUserId() { return userId; }
@@ -25,4 +26,6 @@ public class UserResponseDto {
     public void setPhone(String phone) { this.phone = phone; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public String getUserType() { return userType; }
+    public void setUserType(String userType) { this.userType = userType; }
 }

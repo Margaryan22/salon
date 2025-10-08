@@ -6,10 +6,12 @@ import Frolov_back.NAILS_WEB_APP.domain.SystemUser;
 import Frolov_back.NAILS_WEB_APP.service.DTO.UserRegistrationRequestDto;
 import Frolov_back.NAILS_WEB_APP.service.DTO.UserResponseDto;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface UserService {
     Optional<UserResponseDto> registerNewUser(UserRegistrationRequestDto userRegistrationRequestDto);
     Optional<SystemUser> findUserByEmail(String email);
     // ... другие методы для управления пользователями
+    List<UserResponseDto> getAllUsers();
 }
